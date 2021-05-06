@@ -5,9 +5,7 @@ fetch('https://memegen-link-examples-upleveled.netlify.app/')
   .then((res) => res.text())
   .then((text) => {
     const dataHtml = text;
-
     const picSource = dataHtml.match(/<img [^>]*src="[^"]*"[^>]*>/gm);
-
     const links = [];
 
     for (let i = 0; i < 10; i++) {
